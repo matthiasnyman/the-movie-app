@@ -7,8 +7,7 @@ export async function getMoviesByCategory(
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjYmExNGZhMWFkYjA3NTQyYzZlYmJhZjA4MDZhMTE2YyIsInN1YiI6IjY1MGQ2MTI0NGRhM2Q0MDBjOWRkNWZjYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XlloPaXXlC0pfEZVuzZdGebPfADs29fKcXgm6f22Fvo",
+      Authorization: process.env.Token as string,
     },
   };
   if (searchParams) {
