@@ -50,7 +50,6 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ name, id, selected }) => {
         flex 
         items-center 
         justify-center 
-        hover:text-neutral-900
         cursor-pointer
         p-2
         border-2
@@ -60,8 +59,8 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({ name, id, selected }) => {
         `}
     >
       <div
-        className={`font-small text-sm text-white ${
-          selected ? "text-neutral-900" : "text-neutral-800"
+        className={`font-small text-sm ${
+          selected ? "text-neutral-800" : "text-neutral-200"
         }`}
       >
         {name}

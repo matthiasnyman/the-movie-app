@@ -38,7 +38,7 @@ export default async function Discover({ searchParams }: Props) {
             categories={categories.genres}
             selectedCategory={searchParams.category}
           />
-          {movies.length && <MovieList movies={movies} />}
+          {movies?.length && <MovieList movies={movies} />}
         </>
       )}
     </main>

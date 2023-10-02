@@ -1,4 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NOTES
+
+I have built this pages for movies using NextJS and tailwind
+The layouts and components could be a bit more clear in structure for a clearer code but with time issues i stopped there. There are some small issues where i have not added any failsafe calls to the api so if a movie has no image or if you search for something that do not exist there should be a solution for that
 
 ## Getting Started
 
