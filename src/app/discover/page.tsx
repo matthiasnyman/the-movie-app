@@ -7,8 +7,7 @@ const getList = async (searchParams: string, categoryParams: string) => {
     searchParams,
     categoryParams
   );
-
-  return { categories, movies: movies.results, searchValues: search };
+  return { categories, movies: movies?.results, searchValues: search };
 };
 
 type Props = {
@@ -27,7 +26,7 @@ export default async function Discover({ searchParams }: Props) {
           <h1 className="p-8 text-white text-2xl font-inter font-bold break-words">
             Search
           </h1>
-          {<MovieList movies={searchValues} />}
+          {searchValues.length && <MovieList movies={searchValues} />}
         </>
       ) : (
         <>
@@ -38,9 +37,13 @@ export default async function Discover({ searchParams }: Props) {
             categories={categories.genres}
             selectedCategory={searchParams.category}
           />
-          {movies?.length && <MovieList movies={movies} />}
+          {movies.length && <MovieList movies={movies} />}
         </>
       )}
+
+      <p className="w-full mt-6 text-center text-gray-400 font-inter text-base font-normal leading-4 tracking-normal">
+        This product uses the TMDb API but is not endorsed or certified by TMDb
+      </p>
     </main>
   );
 }

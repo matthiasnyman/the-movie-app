@@ -7,7 +7,7 @@ const Card = (movie: Movie) => {
   const { id, backdrop_path, original_title, release_date } = movie;
   const date = new Date(release_date);
   return (
-    <section className="aspect-[16/9] w-full relative overflow-hidden cursor-pointer rounded-lg group">
+    <section className="md:aspect-[16/9] aspect-[6/9] w-full relative overflow-hidden cursor-pointer rounded-lg group">
       <Image
         fill
         className="object-cover h-full w-full"

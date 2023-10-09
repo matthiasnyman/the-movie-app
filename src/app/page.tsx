@@ -45,6 +45,9 @@ export default async function Home({ searchParams }: Props) {
           {rated && <MovieList movies={rated.slice(0, 4)} />}
         </>
       )}
+      <p className="w-full mt-6 text-center text-gray-400 font-inter text-base font-normal leading-4 tracking-normal">
+        This product uses the TMDb API but is not endorsed or certified by TMDb
+      </p>
     </main>
   );
 }

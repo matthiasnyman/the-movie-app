@@ -23,7 +23,6 @@ export async function getSortedMovies(search: any) {
       fetch(`${url}/3/movie/popular`, options),
       fetch(`${url}/3/movie/top_rated`, options),
     ]);
-
     return {
       popular: await popular.json(),
       playing: await playing.json(),

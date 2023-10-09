@@ -14,7 +14,9 @@ export async function getMoviesByCategory(
     const categories = await fetch(
       `${url}/3/genre/movie/list?language=en`,
       options
-    ).then((response) => response.json());
+    )
+      .then((response) => response.json())
+      .catch((error) => console.log("error", error));
     const searchRes = await fetch(
       `${url}/3/search/movie?query=${searchParams?.search}&include_adult=false&language=en-US&page=1`,
       options
@@ -25,6 +27,7 @@ export async function getMoviesByCategory(
       search: await searchRes?.json(),
     };
   }
+
   try {
     const categories = await fetch(
       `${url}/3/genre/movie/list?language=en`,
